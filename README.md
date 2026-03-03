@@ -15,7 +15,7 @@ A **minimal, runnable Vert.x 5 sample** showing the correct hybrid pattern:
 ```bash
 mvn -q test
 mvn -q package
-java -jar target/vertx5-agent-sample-0.1.0-SNAPSHOT-fat.jar
+java -jar target/vertx5-mcp-0.1.0-SNAPSHOT-fat.jar
 ```
 
 Server starts on **http://localhost:8080** (override with config `http.port`)
@@ -127,7 +127,7 @@ Add this to your Claude Desktop MCP settings:
 ```json
 {
   "mcpServers": {
-    "vertx5-agent-sample": {
+    "vertx5-mcp": {
       "transport": "sse",
       "url": "http://localhost:3001/sse"
     }
@@ -300,5 +300,5 @@ Log files are written to the `logs/` directory (created automatically).
 Override at runtime with a system property:
 
 ```bash
-java -Djava.util.logging.config.file=my-logging.properties -jar target/vertx5-agent-sample-0.1.0-SNAPSHOT.jar
+java -Djava.util.logging.config.file=my-logging.properties -jar target/vertx5-mcp-0.1.0-SNAPSHOT.jar
 ```
